@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="/update_users/{{user.id}}" method="post">
+            <input type="text" name="first_name" placeholder="first_name" value="{{user.first_name}}">
+            <input type="text" name="last_name" placeholder="last_name" value="{{user.last_name}}">
+            <input type="text" name="email" placeholder="email" value="{{user.email}}">
+            <input type="text" name="password" placeholder="password" value="{{user.password}}">
+            <input type="submit">
+        </form>
+</body>
+</html>

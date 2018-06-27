@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello {{something}}</h1>
+    {% if no_users %}
+    <h3>No users has been added </h3>
+    {% else %}
+    <h3>Users:</h3>
+    {% endif %}
+    {% for x in students  %}
+        {% if x["name"] != "Shane" %}
+        <p class="name">{{x["first_name"] }} - {{ x.last_name}}</p>
+        {% endif %} 
+    {% endfor %}
+
+    <form action="/process" method="POST">
+        <input type="text" name="first_name">
+        <input type="text" name="last_name">
+        <input type="submit">
+    </form>
+</body>
+</html>
